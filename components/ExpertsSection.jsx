@@ -21,10 +21,10 @@ const ExpertsSection = () => {
     <section className="py-16 bg-accent text-center">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 mb-16">
-          <h2 className="font-yaro text-4xl sm:text-5xl text-[#F2E8CF]">
+          <h2 className="font-yaro text-4xl sm:text-5xl text-off-white">
             A Support Program Created by Parenting Experts
           </h2>
-          <p className="font-sans text-[#F2E8CF]/80 text-xl max-w-2xl mx-auto">
+          <p className="font-sans text-off-white/80 text-xl max-w-2xl mx-auto">
             Recenter is our exclusive program designed to embrace how families
             thrive best — through support and connection.
           </p>
@@ -51,7 +51,7 @@ const ExpertsSection = () => {
           ))}
         </div>
 
-        <button className="btn-primary">Learn More</button>
+        <button className="btn-primary bg-off-white">Learn More</button>
       </div>
     </section>
   );

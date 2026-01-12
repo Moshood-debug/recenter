@@ -2,6 +2,8 @@ import Hero from "@/components/Hero";
 import PromiseSection from "@/components/PromiseSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import ExpertsSection from "@/components/ExpertsSection";
+import ExploreSection from "@/components/ExploreSection";
+import ResourcesSection from "@/components/ResourcesSection";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       </section>
 
       <ExpertsSection />
+      <ExploreSection />
+      <ResourcesSection />
     </div>
   );
 }
