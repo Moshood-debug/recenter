@@ -11,7 +11,7 @@ const ExploreSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Card 1 */}
-          <div className="bg-white rounded-[2rem] p-10 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-4xl p-10 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="bg-[#0077B6] w-24 h-24 rounded-full flex items-center justify-center mb-6 text-white text-4xl">
               <Home className="w-12 h-12" />
             </div>
@@ -29,7 +29,7 @@ const ExploreSection = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white rounded-[2rem] p-10 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-4xl p-10 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="bg-[#8CC6C2] w-24 h-24 rounded-full flex items-center justify-center mb-6 text-white text-4xl">
               <Users className="w-12 h-12" />
             </div>

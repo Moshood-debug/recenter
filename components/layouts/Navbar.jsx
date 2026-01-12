@@ -12,9 +12,7 @@ const Navbar = () => {
           height={150}
         />
 
-        <button className="bg-accent text-white px-4 py-2 rounded font-yaro font-medium">
-          Login
-        </button>
+        <button className="btn-accent text-light-green">Care Center</button>
       </div>
     </nav>
   );

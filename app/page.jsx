@@ -4,6 +4,8 @@ import TestimonialSection from "@/components/TestimonialSection";
 import ExpertsSection from "@/components/ExpertsSection";
 import ExploreSection from "@/components/ExploreSection";
 import ResourcesSection from "@/components/ResourcesSection";
+import TeacherAwardSection from "@/components/TeacherAwardSection";
+import WhereStartMattersSection from "@/components/WhereStartMattersSection";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
 
       <ExpertsSection />
       <ExploreSection />
+      <WhereStartMattersSection />
+      <TeacherAwardSection />
       <ResourcesSection />
     </div>
   );
