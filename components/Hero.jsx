@@ -4,7 +4,6 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section className="relative h-screen min-h-150 flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/images/hero.png"
@@ -13,11 +12,9 @@ const Hero = () => {
           className="object-cover object-center"
           priority
         />
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-accent/40 bg-linear-to-t from-accent/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-accent/20 bg-linear-to-t from-accent/40 to-transparent"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           <h1 className="font-yaro text-3xl md:text-4xl lg:text-5xl text-white leading-tight drop-shadow-md">
