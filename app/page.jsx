@@ -6,6 +6,8 @@ import ExploreSection from "@/components/ExploreSection";
 import ResourcesSection from "@/components/ResourcesSection";
 import TeacherAwardSection from "@/components/TeacherAwardSection";
 import WhereStartMattersSection from "@/components/WhereStartMattersSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import WaitingListSection from "@/components/WaitingListSection";
 
 export default function Home() {
   return (
@@ -23,6 +25,8 @@ export default function Home() {
       <ExploreSection />
       <WhereStartMattersSection />
       <TeacherAwardSection />
+      <HowItWorksSection />
+      <WaitingListSection />
       <ResourcesSection />
     </div>
   );

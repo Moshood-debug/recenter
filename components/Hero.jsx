@@ -22,9 +22,8 @@ const Hero = () => {
           </h1>
 
           <p className="font-sans text-gray-100 text-md md:text-xl leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
-            The weeks after birth are tender, overwhelming, and deeply
-            important. Recenter provides trusted, in-home postpartum support so
-            mothers can sleep, recover, and feel held not alone.
+            System-led day and night support for mothers post delivery, designed
+            to help you rest, recover and navigate postpartum with reassurance
           </p>
 
           <div className="pt-4">
