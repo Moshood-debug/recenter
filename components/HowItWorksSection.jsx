@@ -33,7 +33,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-light-green">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="font-yaro text-4xl lg:text-5xl text-accent mb-4">
@@ -54,10 +54,10 @@ const HowItWorksSection = () => {
               className="flex flex-col items-center text-center group"
             >
               <div className="relative mb-6">
-                <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center text-accent shadow-md  border-4 border-white/50">
+                <div className="w-24 h-24 bg-light-green rounded-full flex items-center justify-center text-accent">
                   <step.icon size={32} />
                 </div>
-                <div className="absolute -top-3 -right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-yaro font-bold text-sm shadow-sm border-2 border-white">
+                <div className="absolute -top-3 -right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-yaro font-bold text-sm shadow-sm ">
                   {step.number}
                 </div>
               </div>
