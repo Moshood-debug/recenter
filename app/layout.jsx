@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable} ${yaro.variable} antialiased min-h-dvh flex flex-col`}
       >
         <Navbar />
-        <main className="flex-grow mt-20">{children}</main>
+        <main className="flex-grow mt-10 md:mt-20">{children}</main>
         <Footer />
       </body>
     </html>
