@@ -13,7 +13,7 @@ const PromiseSection = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       {/* Image Column */}
-      <div className="relative h-100 w-full rounded-2xl overflow-hidden shadow-xl">
+      <div className="relative h-100 w-full rounded-2xl overflow-hidden ">
         <Image
           src="/assets/images/promise.png"
           alt="Caregiver with family"

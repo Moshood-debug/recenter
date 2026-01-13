@@ -25,7 +25,7 @@ const TestimonialSection = () => {
         </div>
 
         {/* Image */}
-        <div className="relative h-100 lg:h-auto w-full rounded-2xl overflow-hidden shadow-xl">
+        <div className="relative h-100 lg:h-auto w-full rounded-2xl overflow-hidden ">
           <Image
             src="/assets/images/testimonial.png"
             alt="Happy mother and baby"

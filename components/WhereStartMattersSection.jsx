@@ -12,10 +12,10 @@ const WhereStartMattersSection = () => {
           {/* Content Section */}
           <div className="w-full md:w-1/2 space-y-8">
             <div className="space-y-4">
-              <h2 className="font-yaro text-3xl sm:text-4xl md:text-5xl text-[#092540]">
+              <h2 className="font-yaro text-3xl sm:text-4xl md:text-5xl text-dark-blue">
                 Where They Start Matters
               </h2>
-              <p className="font-sans text-[#092540]/80 text-base sm:text-lg leading-relaxed max-w-xl">
+              <p className="font-sans text-dark-blue/80 text-base sm:text-lg leading-relaxed max-w-xl">
                 We don’t just prepare children for the next step; we prepare
                 them for a lifetime of possibilities, so every child has the
                 freedom to explore, learn at their own pace and discover their

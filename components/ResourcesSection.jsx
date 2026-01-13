@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -45,39 +45,31 @@ const ResourcesSection = () => {
       color: "bg-[#FFE5E5]",
       btnColor: "bg-[#092540]",
     },
-    {
-      image: "/assets/images/expert-care.png",
-      title: "More Winter Fun",
-      description: "Another article example for carousel scrolling.",
-      color: "bg-[#FFE5E5]",
-      btnColor: "bg-[#092540]",
-    },
   ];
 
-  // State to track how many items are visible based on screen size
-  const [visibleCount, setVisibleCount] = useState(4); // Default to desktop
   const [startIndex, setStartIndex] = useState(0);
 
-  // Update visible items on resize
+  const [visibleCount, setVisibleCount] = useState(3);
+
   useEffect(() => {
-    const handleResize = () => {
+    const updateVisibleCount = () => {
       if (window.innerWidth < 640) {
-        setVisibleCount(1); // Mobile
+        setVisibleCount(1); // mobile
       } else if (window.innerWidth < 1024) {
-        setVisibleCount(2); // Tablet
+        setVisibleCount(2); // tablet
       } else {
-        setVisibleCount(4); // Desktop
+        setVisibleCount(3); // desktop
       }
     };
 
-    // Set initial value
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    updateVisibleCount();
+    window.addEventListener("resize", updateVisibleCount);
+    return () => window.removeEventListener("resize", updateVisibleCount);
   }, []);
 
-  const maxIndex = Math.max(0, resources.length - visibleCount);
+  const maxIndex = resources.length - visibleCount;
+
+  const totalPages = Math.ceil(resources.length - visibleCount + 1);
 
   const next = () => {
     setStartIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
@@ -92,93 +84,102 @@ const ResourcesSection = () => {
   };
 
   return (
-    <section className="py-12 sm:py-20 bg-light-green overflow-hidden">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-4 sm:space-y-6">
-          <h2 className="font-yaro text-3xl sm:text-4xl md:text-5xl text-accent">
-            Every family deserves a village.
-          </h2>
-          <p className="font-sans text-gray-600 text-base sm:text-lg leading-relaxed">
-            We’re here to support you, not just by providing the best childcare,
-            but with understanding and connection, helping you navigate every
-            step of your parenting journey.
-          </p>
-        </div>
-      </div>
-      <div className="w-full xl:w-[90%] lg:ml-auto px-4 sm:px-0 mb-6 overflow-hidden">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{
-            transform: `translateX(-${(100 / visibleCount) * startIndex}%)`,
-          }}
-        >
-          {resources.map((resource, index) => (
-            <div
-              key={index}
-              className="px-2 sm:px-3 shrink-0"
-              // Dynamically set width based on visibleCount
-              style={{ width: `${100 / visibleCount}%` }}
-            >
-              <div
-                className={`${resource.color} rounded-3xl sm:rounded-4xl overflow-hidden flex flex-col h-full transition-transform hover:-translate-y-1 duration-300 shadow-sm`}
+    <section className="py-20 bg-light-green overflow-hidden">
+      <div className="flex flex-col lg:flex-row gap-12 items-center">
+        {/* Left Column: Text & Controls */}
+        <div className="lg:w-1/3 px-4 lg:pl-[max(2rem,calc((100vw-80rem)/2))]">
+          <div className="space-y-6 max-w-lg">
+            <h2 className="font-yaro text-4xl sm:text-5xl text-accent">
+              Every family deserves a village.
+            </h2>
+            <p className="font-sans text-gray-600 text-lg leading-relaxed">
+              We’re here to support you, not just by providing the best
+              childcare, but with understanding and connection, helping you
+              navigate every step of your parenting journey.
+            </p>
+
+            {/* Controls */}
+            <div className="flex items-center space-x-4 pt-4">
+              <button
+                onClick={prev}
+                className="w-12 h-12 rounded-full border-2 border-accent flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors"
+                aria-label="Previous"
               >
-                <div className="relative h-48 sm:h-52 md:h-60 w-full">
-                  <Image
-                    src={resource.image}
-                    alt={resource.title}
-                    fill
-                    className="object-cover"
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+
+              {/* Pagination */}
+              <div className="flex items-center space-x-2 ">
+                {Array.from({ length: totalPages }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goTo(index)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      startIndex === index
+                        ? "w-6 bg-accent"
+                        : "w-2 bg-accent/40 hover:bg-accent/70"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
                   />
-                </div>
-                <div className="p-6 sm:p-8 flex flex-col grow">
-                  <h3 className="font-yaro text-lg sm:text-xl text-accent mb-3 sm:mb-4 leading-tight">
-                    {resource.title}
-                  </h3>
-                  <p className="font-sans text-accent/80 text-sm sm:text-base mb-4 sm:mb-6 grow">
-                    {resource.description}
-                  </p>
-                  <div>
-                    <button
-                      className={`${resource.btnColor} text-white font-sans text-xs sm:text-sm font-bold px-5 sm:px-6 py-2 rounded-full hover:opacity-90 transition-opacity`}
-                    >
-                      Read More
-                    </button>
+                ))}
+              </div>
+
+              <button
+                onClick={next}
+                className="w-12 h-12 rounded-full border-2 border-accent flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors"
+                aria-label="Next"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column: Carousel */}
+        <div className="lg:w-2/3 w-full pr-4 lg:pr-0 pl-4 lg:pl-0">
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{
+                transform: `translateX(-${(100 / visibleCount) * startIndex}%)`,
+              }}
+            >
+              {resources.map((resource, index) => (
+                <div
+                  key={index}
+                  className="w-full sm:w-1/2 lg:w-1/3 px-3 shrink-0"
+                >
+                  <div
+                    className={`${resource.color} rounded-4xl overflow-hidden flex flex-col h-full  `}
+                  >
+                    <div className="relative h-56 w-full">
+                      <Image
+                        src={resource.image}
+                        alt={resource.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-8 flex flex-col grow">
+                      <h3 className="font-yaro text-xl text-accent mb-4 leading-tight line-clamp-2">
+                        {resource.title}
+                      </h3>
+                      <p className="font-sans text-accent/80 text-sm mb-6 grow line-clamp-3">
+                        {resource.description}
+                      </p>
+                      <div>
+                        <button
+                          className={`${resource.btnColor} text-white font-sans text-sm font-bold px-6 py-2 rounded-full hover:opacity-90 transition-opacity`}
+                        >
+                          Read More
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-      {/* 3. CONTROLS */}
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center items-center space-x-4">
-          <button onClick={prev} className="text-accent hover:text-accent/80">
-            <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7" />
-          </button>
-
-          {/* Dots: Adjust number of dots based on the new maxIndex */}
-          <div className="flex space-x-2">
-            {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goTo(index)}
-                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors ${
-                  startIndex === index
-                    ? "bg-accent"
-                    : "bg-transparent border-2 border-accent"
-                }`}
-              />
-            ))}
           </div>
-
-          <button onClick={next} className="text-accent hover:text-accent/80">
-            <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7" />
-          </button>
-        </div>
-
-        <div className="flex items-center justify-center mt-5">
-          <button className="btn-accent">Join our Village</button>
         </div>
       </div>
     </section>

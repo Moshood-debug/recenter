@@ -3,35 +3,38 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="bg-accent overflow-hidden relative min-h-125 flex items-center">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ">
-        <div className="">
-          <div className="max-w-xl text-white space-y-8 py-12 lg:py-0">
-            <h1 className="font-yaro text-4xl sm:text-5xl lg:text-5xl  leading-[1.1]">
-              Because new mothers deserve rest, not exhaustion.
-            </h1>
-
-            <p className="font-sans text-gray-200 text-md leading-relaxed max-w-lg">
-              The weeks after birth are tender, overwhelming, and deeply
-              important. Recenter provides trusted, in-home postpartum support
-              so mothers can sleep, recover, and feel held not alone.
-            </p>
-
-            <button className="btn-primary">Register your interest</button>
-          </div>
-        </div>
+    <section className="relative h-screen min-h-150 flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/assets/images/hero.png"
+          alt="Mother holding child"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-accent/40 bg-linear-to-t from-accent/60 to-transparent"></div>
       </div>
 
-      {/* Image Container with Curve */}
-      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full lg:h-full lg:block hidden">
-        <div className="relative w-full h-full lg:rounded-l-[50%_100%] overflow-hidden bg-accent">
-          <Image
-            src="/assets/images/hero.png"
-            alt="Mother holding child"
-            fill
-            className="object-cover object-center rounded-b-[50px]"
-            priority
-          />
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h1 className="font-yaro text-3xl md:text-4xl lg:text-5xl text-white leading-tight drop-shadow-md">
+            Because new mothers deserve rest, not exhaustion.
+          </h1>
+
+          <p className="font-sans text-gray-100 text-md md:text-xl leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
+            The weeks after birth are tender, overwhelming, and deeply
+            important. Recenter provides trusted, in-home postpartum support so
+            mothers can sleep, recover, and feel held not alone.
+          </p>
+
+          <div className="pt-4">
+            <button className="btn-primary text-lg lg:text-xl">
+              Register your interest
+            </button>
+          </div>
         </div>
       </div>
     </section>
