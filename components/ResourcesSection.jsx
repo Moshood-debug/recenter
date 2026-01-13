@@ -83,6 +83,29 @@ const ResourcesSection = () => {
     setStartIndex(index);
   };
 
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      prev();
+    }
+  };
+
   return (
     <section className="py-20 bg-light-green overflow-hidden">
       <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -136,7 +159,12 @@ const ResourcesSection = () => {
         </div>
 
         {/* Right Column: Carousel */}
-        <div className="lg:w-2/3 w-full pr-4 lg:pr-0 pl-4 lg:pl-0">
+        <div
+          className="lg:w-2/3 w-full pr-4 lg:pr-0 pl-4 lg:pl-0"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
