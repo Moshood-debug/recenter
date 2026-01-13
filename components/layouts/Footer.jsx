@@ -10,7 +10,6 @@ import {
   ChevronUp,
 } from "lucide-react";
 
-// Mocking the TikTok icon since it might not be in the version of lucide-react present or just to be safe with standard imports
 const TikTok = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +31,6 @@ const Footer = () => {
   return (
     <footer className="bg-accent text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
-        {/* Newsletter Section */}
         <div className="flex flex-col items-center mb-12 text-center">
           <h2 className="text-2xl font-bold mb-6 font-sans">
             Let's Stay in Touch!
@@ -54,9 +52,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Main Footer Content */}
         <div className="flex flex-col items-center">
-          {/* Logo Section */}
           <div className="flex flex-col items-center">
             <Image
               src="/assets/logos/recenter_logo2.svg"
@@ -99,7 +95,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Back to Top */}
         <div className="flex flex-col items-center mt-4 mb-8">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -110,7 +105,6 @@ const Footer = () => {
           </button>
         </div>
 
-        {/* Copyright */}
         <div className="border-t border-gray-600 pt-6 text-center text-sm text-gray-300 flex flex-wrap justify-center gap-4">
           <span>© 2026 Recenter</span>
           <span>|</span>
