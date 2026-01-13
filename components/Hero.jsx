@@ -23,13 +23,13 @@ const Hero = () => {
       </div>
 
       {/* Image Container with Curve */}
-      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full lg:h-full">
+      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full lg:h-full lg:block hidden">
         <div className="relative w-full h-full lg:rounded-l-[50%_100%] overflow-hidden bg-accent">
           <Image
             src="/assets/images/hero.png"
             alt="Mother holding child"
             fill
-            className="object-cover object-center lg:rounded-l-[250px]"
+            className="object-cover object-center rounded-b-[50px]"
             priority
           />
         </div>
