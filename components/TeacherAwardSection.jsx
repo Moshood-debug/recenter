@@ -21,12 +21,11 @@ const TeacherAwardSection = () => {
           {/* Content Section */}
           <div className="w-full md:w-1/2 p-8 sm:p-12 flex flex-col justify-center items-start">
             <h2 className="font-yaro text-3xl sm:text-4xl text-accent mb-4 sm:mb-6">
-              Teacher of the Year Award
+              Doula of the Year Award
             </h2>
             <p className="font-sans text-gray-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-              Let's celebrate the heart behind every day at School: Goddard
-              teachers! Give them the recognition they deserve by nominating
-              them for Teacher of the Year by 1/30.
+              Let's celebrate the doula who made a difference in the lives of
+              new mothers and their families. Nominate a doula today!
             </p>
             <button className="btn-accent">Submit a Nomination</button>
           </div>
