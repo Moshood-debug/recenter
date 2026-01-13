@@ -4,7 +4,7 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <nav className="container mx-auto">
-      <div className="flex justify-between items-center py-4 bg-white ">
+      <div className="flex justify-between items-center py-4 px-4 sm:px-6 xl:px-0 bg-white ">
         <Image
           src="/assets/logos/recenter_logo.svg"
           alt="Logo"
