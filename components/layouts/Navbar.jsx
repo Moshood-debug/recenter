@@ -61,7 +61,7 @@ const Navbar = () => {
             ))}
 
             <button className="bg-accent text-white px-6 py-2.5 rounded-full font-sans font-medium text-sm hover:bg-[#002D5C]/90 hover:shadow-lg">
-              Care Center
+              Join Waiting List
             </button>
           </div>
 

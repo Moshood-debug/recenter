@@ -2,13 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import {
-  Facebook,
-  Instagram,
-  Youtube,
-  Linkedin,
-  ChevronUp,
-} from "lucide-react";
+import { Instagram, ChevronUp, Twitter } from "lucide-react";
 
 const TikTok = ({ className }) => (
   <svg
@@ -42,13 +36,12 @@ const Footer = () => {
               className="grow px-4 py-2 text-gray-700 outline-none"
             />
             <button className="bg-[#A8DADC] text-[#002D5C] font-semibold px-6 py-2 rounded-full hover:bg-[#8ecbc9] transition-colors">
-              Sign Up
+              Join Waiting List
             </button>
           </div>
           <p className="text-xs text-gray-300 mt-4 max-w-2xl">
             By submitting this form, you agree to receive messages from
-            Recenter, its affiliates and/or subsidiaries, including Recenter
-            Systems, LLC.
+            Recenter.
           </p>
         </div>
 
@@ -83,7 +76,7 @@ const Footer = () => {
                 href="#"
                 className="bg-white text-[#002D5C] p-2 rounded-full hover:bg-gray-200 transition-colors"
               >
-                <Youtube size={20} />
+                <Twitter size={20} />
               </a>
             </div>
           </div>

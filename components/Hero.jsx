@@ -28,7 +28,7 @@ const Hero = () => {
 
           <div className="pt-4">
             <button className="btn-primary text-lg lg:text-xl">
-              Register your interest
+              Join Waiting List
             </button>
           </div>
         </div>

@@ -8,42 +8,44 @@ const ResourcesSection = () => {
   const resources = [
     {
       image: "/assets/images/expert-care.png",
-      title: "Ten Indoor Activities to Keep Young Children Busy During Winter",
+      title:
+        "Building Your Village: The Importance of Structured Postpartum Support",
       description:
-        "Keep kids entertained indoors during cold weather with fun and educational indoor activities for kids.",
+        "Learn why a structured system is more effective than casual help during your recovery journey at home.",
       color: "bg-[#F9E8D0]",
-      btnColor: "bg-[#092540]",
+      btnColor: "bg-accent",
     },
     {
       image: "/assets/images/expert-wellness.png",
-      title: "Look How Far They've Come!: Celebrating Your Child's Growth",
+      title: "Transitioning Home: What to Expect After Hospital Discharge",
       description:
-        "Celebrate your child's growth beyond first steps and words. Discover milestones, tips and ways to track development.",
+        "Practical guidance on navigating the first few days at home with non-medical, professional support.",
       color: "bg-[#AEE2FF]",
-      btnColor: "bg-[#092540]",
+      btnColor: "bg-accent",
     },
     {
       image: "/assets/images/expert-nutrition.png",
-      title: "Routines Are Essential After the Holidays",
+      title: "Day and Night: Tailoring Support Around Your Recovery Needs",
       description:
-        "Get back on track after holiday disruptions with consistent routines. Tips for reestablishing structure.",
+        "Explore how daytime and nighttime assistance can be designed specifically around your physical and emotional recovery.",
       color: "bg-[#A7E8E2]",
-      btnColor: "bg-[#092540]",
+      btnColor: "bg-accent",
     },
     {
       image: "/assets/images/promise.png",
-      title: "Outdoor Play in Cold Weather",
+      title: "Professional Governance: Why Supervised Support Matters",
       description:
-        "Discover fun outdoor winter activities for preschoolers! Learn how cold-weather play boosts health.",
+        "Discovery the difference that professionally governed and supervised care makes for families after delivery.",
       color: "bg-[#F9E8D0]",
-      btnColor: "bg-[#092540]",
+      btnColor: "bg-accent",
     },
     {
       image: "/assets/images/expert-care.png",
-      title: "More Winter Fun",
-      description: "Another article example for carousel scrolling.",
+      title: "Recovery Beyond the Hospital: A Holistic Approach",
+      description:
+        "How Recenter's supervised program ensures consistency and quality at every stage of your journey.",
       color: "bg-[#FFE5E5]",
-      btnColor: "bg-[#092540]",
+      btnColor: "bg-accent",
     },
   ];
 
@@ -113,12 +115,12 @@ const ResourcesSection = () => {
         <div className="lg:w-1/3 px-4 lg:pl-[max(2rem,calc((100vw-80rem)/2))]">
           <div className="space-y-6 max-w-lg">
             <h2 className="font-yaro text-4xl sm:text-5xl text-accent">
-              Every family deserves a village.
+              Guidance for every stage of your recovery.
             </h2>
             <p className="font-sans text-gray-600 text-lg leading-relaxed">
-              We’re here to support you, not just by providing the best
-              childcare, but with understanding and connection, helping you
-              navigate every step of your parenting journey.
+              Explore our collection of resources designed to help you navigate
+              postpartum life with confidence, clarity, and professional
+              support.
             </p>
 
             {/* Controls */}

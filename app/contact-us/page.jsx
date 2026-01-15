@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactUsPage() {
   return (
@@ -38,8 +39,12 @@ export default function ContactUsPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-accent mb-1">Email Us</h3>
-                  <p className="text-gray-600">hello@recenter-health.com</p>
-                  <p className="text-gray-600">support@recenter-health.com</p>
+                  <Link
+                    href="mailto:recenter.co.uk"
+                    className="text-gray-600 hover:text-accent"
+                  >
+                    recenter.co.uk
+                  </Link>
                 </div>
               </div>
 
@@ -49,7 +54,12 @@ export default function ContactUsPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-accent mb-1">Call Us</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <Link
+                    href="tel:+447407497589"
+                    className="text-gray-600 hover:text-accent"
+                  >
+                    +44 (7407) 497589
+                  </Link>
                   <p className="text-sm text-gray-400">
                     Mon-Fri, 9am - 5pm EST
                   </p>
@@ -63,9 +73,9 @@ export default function ContactUsPage() {
                 <div>
                   <h3 className="font-bold text-accent mb-1">Our Location</h3>
                   <p className="text-gray-600">
-                    123 Wellness Blvd, Suite 100
+                    345 Bury Road Tottington,
                     <br />
-                    New York, NY 10012
+                    Bury, UK
                   </p>
                 </div>
               </div>
