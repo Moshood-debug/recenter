@@ -1,57 +1,71 @@
 import React from "react";
 import Image from "next/image";
+import { ShieldCheck, Users, ClipboardCheck } from "lucide-react";
 
+/**
+ * ExpertsSection - Redesigned to focus on Governance and Structure.
+ * Replaces the previous "Parenting Experts" section with a focus on trust and professional coordination.
+ */
 const ExpertsSection = () => {
-  const features = [
-    {
-      image: "/assets/images/expert-care.png",
-      text: "Personalized care plans tailored to your recovery needs and parenting goals.",
-    },
-    {
-      image: "/assets/images/expert-wellness.png",
-      text: "Emotional support and mindfulness practices to foster resilience and bonding.",
-    },
-    {
-      image: "/assets/images/expert-nutrition.png",
-      text: "Holistic wellness guidance including nutrition and physical recovery.",
-    },
-  ];
-
   return (
-    <section className="py-16 bg-accent text-center">
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-4 mb-16">
-          <h2 className="font-yaro text-4xl sm:text-5xl text-off-white">
-            A Support Program Created by Parenting Experts
-          </h2>
-          <p className="font-sans text-off-white/80 text-xl max-w-2xl mx-auto">
-            Recenter is our exclusive program designed to embrace how families
-            thrive best — through support and connection.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg p-3"
-            >
-              <div className="relative h-64 w-full rounded-2xl overflow-hidden mb-6">
-                <Image
-                  src={feature.image}
-                  alt="Feature illustration"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <p className="font-sans text-lg font-semibold text-accent px-4 pb-4">
-                {feature.text}
+    <section className="py-20 bg-accent text-off-white  overflow-hidden">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8 text-left">
+            <div className="space-y-4">
+              <h2 className="font-yaro text-4xl sm:text-5xl leading-tight">
+                Thoughtfully Structured,{" "}
+                <span className="text-primary italic">Carefully Governed.</span>
+              </h2>
+              <p className="font-sans text-xl text-white leading-relaxed max-w-xl">
+                Recenter is designed to feel calm and reassuring, but behind the
+                scenes, it is carefully structured and professionally
+                coordinated.
               </p>
             </div>
-          ))}
-        </div>
 
-        <button className="btn-primary bg-off-white">Learn More</button>
+            <div className="space-y-6">
+              {/* Point 1 */}
+              <div className="flex items-start gap-4 ">
+                <div className="mt-1 p-2 rounded-lg bg-off-white/10 ">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <p className="font-sans text-lg text-white/80 leading-relaxed">
+                  Support is delivered by trained postpartum support workers and
+                  overseen to ensure consistency, boundaries, and quality at
+                  every stage.
+                </p>
+              </div>
+
+              {/* Point 2 */}
+              <div className="flex items-start gap-4 ">
+                <div className="mt-1 p-2 rounded-lg bg-off-white/10 ">
+                  <ShieldCheck className="w-6 h-6 text-primary" />
+                </div>
+                <p className="font-sans text-lg text-white/80 leading-relaxed">
+                  This allows families to access help with confidence, knowing
+                  the service is reliable and well governed.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-4">
+              <button className="btn-primary ">
+                Join the waiting list to register your interest
+              </button>
+            </div>
+          </div>
+
+          <div className="">
+            <Image
+              src="/assets/images/expert-care.png"
+              alt="Recenter Experts"
+              width={500}
+              height={500}
+              className="object-cover rounded-2xl"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

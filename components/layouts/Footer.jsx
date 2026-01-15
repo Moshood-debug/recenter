@@ -71,12 +71,6 @@ const Footer = () => {
                 href="#"
                 className="bg-white text-[#002D5C] p-2 rounded-full hover:bg-gray-200 transition-colors"
               >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-white text-[#002D5C] p-2 rounded-full hover:bg-gray-200 transition-colors"
-              >
                 <Instagram size={20} />
               </a>
               <a

@@ -4,10 +4,9 @@ import { Check } from "lucide-react";
 
 const PromiseSection = () => {
   const promises = [
-    "Compassionate Postpartum Care",
-    "Experienced Doulas & Nurses",
-    "Daily Wellness Check-ins",
-    "Rigorous Safety Protocols",
+    "Support often drops away as exhaustion intensify.",
+    "Though sometimes willing, family isn’t always available.",
+    "Many mothers are left to manage physical recovery, broken sleep, and emotional adjustment with little to no support.",
   ];
 
   return (
@@ -25,14 +24,13 @@ const PromiseSection = () => {
       {/* Text Column */}
       <div className="space-y-8">
         <h2 className="font-yaro text-4xl text-accent">
-          The Recenter Promise to Families
+          What Happens After Delivery.
         </h2>
 
         <ul className="space-y-4">
           {promises.map((item, index) => (
-            <li key={index} className="flex items-center space-x-3">
-              <Check className="w-6 h-6 text-green" />
-
+            <li key={index} className="flex items-start space-x-3">
+              <Check className="w-6 h-6 text-green shrink-0" />
               <span className="font-sans text-lg text-gray-700">{item}</span>
             </li>
           ))}

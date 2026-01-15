@@ -17,14 +17,14 @@ export default function Home() {
       <section className="py-16 bg-light-green">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           <PromiseSection />
-          <TestimonialSection />
+
+          {/* <TestimonialSection /> */}
         </div>
       </section>
-
-      <ExpertsSection />
       <ExploreSection />
-      <WhereStartMattersSection />
-      <TeacherAwardSection />
+      <ExpertsSection />
+      {/* <WhereStartMattersSection /> */}
+      {/* <TeacherAwardSection /> */}
       <HowItWorksSection />
       <WaitingListSection />
       <ResourcesSection />

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
+import ExpressiveButton from "../ExpressiveButton";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

@@ -45,7 +45,7 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-          {/* Connecting Line (Desktop) */}
+         
           {/* <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-red-400 -z-10"></div> */}
 
           {steps.map((step, index) => (
