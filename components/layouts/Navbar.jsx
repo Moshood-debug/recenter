@@ -4,11 +4,12 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
-import ExpressiveButton from "../ExpressiveButton";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { scrollToSection } = useScrollToSection();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,8 +60,10 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-
-            <button className="bg-accent text-white px-6 py-2.5 rounded-full font-sans font-medium text-sm hover:bg-[#002D5C]/90 hover:shadow-lg">
+            <button
+              onClick={() => scrollToSection("waiting-list")}
+              className="btn-accent px-6 py-2.5 text-white"
+            >
               Join Waiting List
             </button>
           </div>
@@ -102,10 +105,13 @@ const Navbar = () => {
             </Link>
 
             <button
-              className="btn-accent text-light-green w-full"
-              onClick={() => setOpen(false)}
+              className="bg-accent text-white px-6 py-2.5 rounded-full font-sans font-medium text-sm hover:bg-[#002D5C]/90 hover:shadow-lg transition-all duration-300 w-full"
+              onClick={() => {
+                scrollToSection("waiting-list");
+                setOpen(false);
+              }}
             >
-              Care Center
+              Join Waiting List
             </button>
           </div>
         </div>

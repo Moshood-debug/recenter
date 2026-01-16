@@ -24,7 +24,7 @@ const ResourcesSection = () => {
       btnColor: "bg-accent",
     },
     {
-      image: "/assets/images/expert-nutrition.png",
+      image: "/assets/images/hero.png",
       title: "Day and Night: Tailoring Support Around Your Recovery Needs",
       description:
         "Explore how daytime and nighttime assistance can be designed specifically around your physical and emotional recovery.",

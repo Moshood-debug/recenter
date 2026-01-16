@@ -12,7 +12,7 @@ const WaitingListSection = () => {
     firstName: "",
     lastName: "",
     email: "",
-    mobile: "",
+    // mobile: "",
   });
 
   const handleChange = (e) => {
@@ -23,11 +23,13 @@ const WaitingListSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Add submission logic here
   };
 
   return (
-    <section className="py-24 bg-accent text-white relative overflow-hidden">
+    <section
+      id="waiting-list"
+      className="py-24 bg-accent text-white relative overflow-hidden"
+    >
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
@@ -52,7 +54,6 @@ const WaitingListSection = () => {
             className="max-w-2xl mx-auto space-y-6 bg-white/5 backdrop-blur-sm p-8 sm:p-12 rounded-[2.5rem] border border-white/10"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
-              {/* First Name */}
               <div className="space-y-2">
                 <label className="font-sans text-sm font-semibold text-primary/80 ml-4 uppercase tracking-wider">
                   First Name
@@ -71,7 +72,6 @@ const WaitingListSection = () => {
                 </div>
               </div>
 
-              {/* Last Name */}
               <div className="space-y-2">
                 <label className="font-sans text-sm font-semibold text-primary/80 ml-4 uppercase tracking-wider">
                   Last Name
@@ -91,7 +91,7 @@ const WaitingListSection = () => {
               </div>
 
               {/* Email */}
-              <div className="space-y-2">
+              <div className="space-y-2 col-span-2">
                 <label className="font-sans text-sm font-semibold text-primary/80 ml-4 uppercase tracking-wider">
                   Email Address
                 </label>
@@ -109,7 +109,7 @@ const WaitingListSection = () => {
                 </div>
               </div>
 
-              {/* Mobile Number */}
+              {/*            
               <div className="space-y-2">
                 <label className="font-sans text-sm font-semibold text-primary/80 ml-4 uppercase tracking-wider">
                   Mobile Number
@@ -126,7 +126,7 @@ const WaitingListSection = () => {
                     onChange={handleChange}
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="pt-4">

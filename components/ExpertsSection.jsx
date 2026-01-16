@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { ShieldCheck, Users, ClipboardCheck } from "lucide-react";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
 
-/**
- * ExpertsSection - Redesigned to focus on Governance and Structure.
- * Replaces the previous "Parenting Experts" section with a focus on trust and professional coordination.
- */
 const ExpertsSection = () => {
+  const { scrollToSection } = useScrollToSection();
+
   return (
     <section className="py-20 bg-accent text-off-white  overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -50,7 +49,10 @@ const ExpertsSection = () => {
             </div>
 
             <div className="pt-4">
-              <button className="btn-primary ">
+              <button
+                onClick={() => scrollToSection("waiting-list")}
+                className="btn-primary "
+              >
                 Join the waiting list to register your interest
               </button>
             </div>

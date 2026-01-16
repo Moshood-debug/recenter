@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Instagram, ChevronUp, Twitter } from "lucide-react";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
 
 const TikTok = ({ className }) => (
   <svg
@@ -22,6 +23,7 @@ const TikTok = ({ className }) => (
 );
 
 const Footer = () => {
+  const { scrollToSection } = useScrollToSection();
   return (
     <footer className="bg-accent text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
@@ -35,7 +37,10 @@ const Footer = () => {
               placeholder="Email Address"
               className="grow px-4 py-2 text-gray-700 outline-none"
             />
-            <button className="bg-[#A8DADC] text-[#002D5C] font-semibold px-6 py-2 rounded-full hover:bg-[#8ecbc9] transition-colors">
+            <button
+              onClick={() => scrollToSection("waiting-list")}
+              className="bg-[#A8DADC] text-[#002D5C] font-semibold px-6 py-2 rounded-full hover:bg-[#8ecbc9] transition-colors"
+            >
               Join Waiting List
             </button>
           </div>

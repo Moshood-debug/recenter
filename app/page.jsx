@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from "@/components/Hero";
 import PromiseSection from "@/components/PromiseSection";
 import TestimonialSection from "@/components/TestimonialSection";
@@ -8,8 +10,22 @@ import TeacherAwardSection from "@/components/TeacherAwardSection";
 import WhereStartMattersSection from "@/components/WhereStartMattersSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import WaitingListSection from "@/components/WaitingListSection";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace("#", "");
+      setTimeout(() => {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <div>
       <Hero />
