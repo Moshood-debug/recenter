@@ -59,7 +59,7 @@ const WaitingListSection = () => {
                   First Name
                 </label>
                 <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 text-primary w-5 h-5 opacity-60" />
+                  <User className="absolute left-4 top-1/2 -translate-y-1/2 text-accent w-5 h-5 opacity-60" />
                   <input
                     type="text"
                     name="firstName"
@@ -77,7 +77,7 @@ const WaitingListSection = () => {
                   Last Name
                 </label>
                 <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 text-primary w-5 h-5 opacity-60" />
+                  <User className="absolute left-4 top-1/2 -translate-y-1/2 text-accent w-5 h-5 opacity-60" />
                   <input
                     type="text"
                     name="lastName"
@@ -91,12 +91,12 @@ const WaitingListSection = () => {
               </div>
 
               {/* Email */}
-              <div className="space-y-2 col-span-2">
+              <div className="space-y-2 col-span-1 sm:col-span-2">
                 <label className="font-sans text-sm font-semibold text-primary/80 ml-4 uppercase tracking-wider">
                   Email Address
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-primary w-5 h-5 opacity-60" />
+                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-accent w-5 h-5 opacity-60" />
                   <input
                     type="email"
                     name="email"
